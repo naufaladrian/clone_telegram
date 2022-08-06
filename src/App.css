@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* sidebar-start */
+.side-bar {
+  flex: 1;
+  background-color: white;
+  border-right: 1px solid rgb(215, 215, 215);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow-y: auto;
 }
-
-.App-link {
-  color: #61dafb;
+.side-content {
+  padding: 7px 0px;
+  height: 70px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 98%;
+  box-sizing: border-box;
 }
+/* menu-start */
+.first-side{
+    display: flex;
+    align-items: center;
+}
+.side-bar .menu .bi-list {
+  width: 8%;
+  padding: 5px;
+  color: black;
+  border-radius: 50%;
+}
+.side-bar .menu .bi-search {
+  display: none;
+}
+.side-bar .menu .bi-list:hover {
+  background-color: whitesmoke;
+}
+.side-bar .menu h3{
+    display: none;
+}
+.side-bar .menu input {
+  width: 75%;
+  height: 42px;
+  padding: 5px 18px;
+  font-size: 18px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+}
+/* menu-ed */
+/* contact-start */
+.side-bar .contact svg {
+  width: 50px;
+}
+.side-bar .contact .contact-text {
+  width: 77%;
+}
+.side-bar .contact .contact-text {
+  font-size: 15px;
+}
+.side-bar .contact:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+/* contact-ed */
+/* sidebar-ed */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* main-start */
+/* topbar-start */
+.main {
+  flex: 3.5;
+  background-color: whitesmoke;
+  border-right: 1px solid rgb(182, 182, 182);
+}
+.main .top-bar {
+  height: 58px;
+  background-color: white;
+  display: flex;
+}
+.main .top-bar .contact-info {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+  margin-left: 20px;
+}
+.main .top-bar .contact-info svg {
+  height: 43px;
+}
+.main .top-bar .chat-feature {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 5;
+  margin-right: 20px;
+}
+.main .top-bar .chat-feature svg {
+  height: 100%;
+  width: 18px;
+  color: rgb(99, 99, 99);
+  padding: 0px 7px;
+}
+/* topbar-ed */
+/* chatarea-start */
+.main .chat {
+  background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-dark.png);
+  height: 100vh;
+}
+/* chatarea-ed */
+/* main-ed */
+
+/* ------- */
+/* responsive */
+@media only screen and (max-width: 1255px) {
+  .main {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .side-bar .menu{
+    padding: 0px 20px;
+    background-color: rgb(102, 148, 156);
+    justify-content: space-between;
+    border: none;
+    border-radius: 0px;
+    width: 100vw;
+  }
+  .side-bar .contact{
+    border-radius: 0px;
+    width: 100vw;
+  }
+  .side-bar .menu .bi-search {
+    display: block;
+    color: white;
+    justify-self:flex-end;
+  }
+  .side-bar .menu input {
+    display: none;
+  }
+  .side-bar .menu .bi-list {
+    height: 35px;
+    width: 35px;
+    padding: 0px 8px;
+    color: white;
+  }
+  .side-bar .menu .bi-list:hover{
+    background-color: rgba(245, 245, 245, 0.309);
+  }
+  .side-bar .menu h3{
+    display: block;
+    color: white;
   }
 }
