@@ -55,6 +55,10 @@
 }
 /* menu-ed */
 /* contact-start */
+.side-bar{
+  overflow: hidden;
+
+}
 .side-bar .contact svg {
   width: 50px;
 }
@@ -63,6 +67,11 @@
 }
 .side-bar .contact .contact-text {
   font-size: 15px;
+}
+.last-message{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .side-bar .contact:hover {
   background-color: whitesmoke;
@@ -75,7 +84,6 @@
 /* topbar-start */
 .main {
   flex: 3.5;
-  background-color: whitesmoke;
   border-right: 1px solid rgb(182, 182, 182);
 }
 .main .top-bar {
@@ -94,11 +102,18 @@
 .main .top-bar .contact-info svg {
   height: 43px;
 }
+.main .top-bar .contact-info-text{
+  width: 200px;
+  padding: 0px 15px;
+}
+.main .top-bar .contact-info-text p{
+  font-size: 14px;
+}
 .main .top-bar .chat-feature {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex: 5;
+  flex: 3.5;
   margin-right: 20px;
 }
 .main .top-bar .chat-feature svg {
@@ -110,8 +125,85 @@
 /* topbar-ed */
 /* chatarea-start */
 .main .chat {
-  background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-dark.png);
-  height: 100vh;
+  height: 90%;
+  position: relative;
+}
+.chat-input{
+  border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  transform: translateX(30%);
+  background-color: white;
+  height: 50px;
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.chat-input svg{
+  flex: 1;
+  color: rgb(151, 151, 151);
+}
+.chat-input .bi-paperclip{
+  transform: rotate(45deg);
+}
+.chat-input input{
+  flex: 8;
+  height: 90%;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+.chat-result{
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+}
+.chat-result-ct{
+  display: flex;
+  flex-direction: column;
+}
+.chat-in{
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  height: 30px;
+  max-width: 300px;
+  border-radius: 10px;
+  width: auto;
+  padding: 0px 10px;
+  padding-right: 50px;
+  margin: 10px 0px;
+  align-self: flex-start;
+
+
+  /* box-sizing: border-box; */
+}
+
+.chat-in .time{
+  font-size: 10px;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+}
+.chat-out{
+  margin: 10px 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(136, 254, 123);
+  height: 30px;
+  max-width: 300px;
+  border-radius: 10px;
+  padding: 0px 10px;
+  padding-right: 50px;
+  align-self: flex-end;
+}
+.chat-out .time{
+  font-size: 10px;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
 }
 /* chatarea-ed */
 /* main-ed */

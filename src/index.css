@@ -4,7 +4,8 @@
 }
 
 body {
-  background-color: gray;
+  background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/double-bubble-dark.png);
+
   font-family: "Roboto", sans-serif;
   overflow-y: hidden;
 }
